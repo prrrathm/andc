@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var myArray = new Array() //Empty Array
+        let newArray = new Array()
+        console.log("My Empty Array---- "+myArray.length)
+        console.log("New Array---- "+newArray.length)
+
+        solarSys = new Array(2) // Array defined with size
+        console.log("solarSys Array---- "+solarSys.length)
+        console.log("solarSys Array---- "+solarSys)
+        solarSys[0] = "Mercury" //Assigning values to the array
+        solarSys[1] = "Venus"
+
+        console.log("solarSys Array---- "+solarSys)
+
+        solarSysCondensedArray= new Array("Mercury","Venus","Jupiter") //Condensed Array
+        solarSysLArray=["Mercury","Venus","Jupiter","Pluto"] //literal array
+        document.write("<p>Length of an array object---</p>"+solarSysCondensedArray.length)
+        document.write("<p>Reverse of an array object---</p>"+solarSysCondensedArray.reverse())
+        
+        console.log("solarSysLArray Array---- "+solarSysLArray)
+        //var arrayText = solarSysLArray.join(",")
+        var arrayText = solarSysLArray.join("#")
+        console.log("Type of arrayText---"+typeof arrayText)
+        console.log("Type of solarSysLArray---"+typeof solarSysLArray)
+        document.write("<p>Joined of an array object---</p>"+arrayText)
+        let text
+        //Function to be used as an object
+        function displayFunction(){
+            console.log("I am a display function ")
+            let language =["Java","C","C++","Python","JavaScript"]
+            let lengthOfLanguage=language.length
+            textToBeDisplay ="<ul>"
+                for(let i = 0 ; i<lengthOfLanguage;i++){
+                    textToBeDisplay += "<li>"+language[i]+"</li>"
+
+                }
+            textToBeDisplay += "</ul>"
+            document.write("<p>------------------</p>")
+            document.write(textToBeDisplay)
+
+            const singers=["Badshah","YO YO Honey Singh","Diljeet"]
+            
+            text="<ul>"
+            singers.forEach(displaySingers)
+            text +="</ul>"
+            document.write("<p>------------------</p>")
+            document.write(text)
+
+        }
+
+        function displaySingers(value){
+            text +="<li>"+value+"</li>"
+        }
+        myArray[0]= Date.now
+        myArray[1]= displayFunction
+        myArray[2]= solarSysLArray
+
+        console.log("Length of myArray--"+myArray.length)
+        console.log("Content of myArray--"+myArray)
+        console.log("Typeof content in myArray--"+typeof myArray[0]+"---"+typeof myArray[1]+"-----"+typeof myArray[2])
+
+        
+        
+	</script>
+	<input type="button" value="Display Content" onclick="displayFunction()">
+	
+</body>
+</html>

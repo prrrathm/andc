@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+       /**
+
+        The const keyword was introduced in ES6 (2015).
+
+        Variables defined with const cannot be Redeclared.
+
+        Variables defined with const cannot be Reassigned.
+
+        Variables defined with const have Block Scope.
+        
+        Use const when you declare:
+
+            A new Array
+            A new Object
+            A new Function
+            A new RegExp
+
+**/
+        const PI = 3.141592653589793;
+        //PI = 5.14;      // This will give an error. It cannot be reassigned
+        //PI = PI + 10;   // This will also give an error.It cannot be reassigned
+        
+        /**
+        const age;
+        age=18;
+        */
+
+        // You can create a constant array:
+        const cars = ["Saab", "Volvo", "BMW"];
+        console.log("Before---"+cars)
+        // You can change an element:
+        cars[0] = "Toyota";
+        console.log("After---"+cars)
+        // You can add an element:
+        cars.push("Audi");
+        console.log("Pushed values---"+cars)
+        //cars=15;
+	</script>
+	
+	
+</body>
+</html>

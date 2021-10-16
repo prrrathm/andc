@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var companyName = "Microsoft"; //Global Scope
+        let greetings = "Good Morning All"
+        function displayDetail()
+        {
+            //let empName = "Jack"; //Local Scope
+            var empName = "Jack"; //Local Scope
+            document.write("Welcome to "+companyName+","+empName+"----"+typeof empName);
+            document.write("<p>Inside Display Detail Greeting---</p>"+greetings);
+        }
+        document.write("<p>Company Name---</p>"+companyName);
+        document.write("<p>Greeting outside function---</p>"+greetings);
+        document.write("EmpName--- "+empName+"--Company Name---"+companyName);
+	
+	</script>
+	<input type="button" value="Call displayDetail" onclick="displayDetail()">
+	
+</body>
+</html>
