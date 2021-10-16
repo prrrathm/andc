@@ -1,3 +1,4 @@
+//including the http module in JS
 var http = require('http');
 
 //create a server object:
